@@ -107,5 +107,5 @@ Check out the live project here:
 ## <h2>📧 Contact</h2>
 <p>
 <strong>Your Name</strong>: vahith2004@gmail.com<br>
-<strong>GitHub</strong>: <a href="https://github.com/Mohammedvahith" target="_blank">https://github.com/Mohammedvahith</a>
+<strong>GitHub</strong>: <a href="https://github.com/Mohammedvahith" target="_blank">MY GITHUB</a>
 </p>
