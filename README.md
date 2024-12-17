@@ -1,4 +1,5 @@
 🎬 A Hybrid Movie Recommendation System Leveraging KNN and TF-IDF
+
 📌 Overview
 This project is a hybrid movie recommendation system that combines K-Nearest Neighbors (KNN) and TF-IDF techniques to deliver personalized movie recommendations. The system utilizes movie metadata like plot summaries, genres, and other attributes to find movies similar to user preferences.
 
