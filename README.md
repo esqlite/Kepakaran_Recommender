@@ -1,73 +1,111 @@
-🎬 A Hybrid Movie Recommendation System Leveraging KNN and TF-IDF
+<h1 align="center">🎬 A Hybrid Movie Recommendation System Leveraging KNN and TF-IDF</h1>
 
-📌 Overview
-This project is a hybrid movie recommendation system that combines K-Nearest Neighbors (KNN) and TF-IDF techniques to deliver personalized movie recommendations. The system utilizes movie metadata like plot summaries, genres, and other attributes to find movies similar to user preferences.
+## <h2>📌 Overview</h2>
+<p>
+This project is a <strong>hybrid movie recommendation system</strong> that combines 
+<strong>K-Nearest Neighbors (KNN)</strong> and <strong>TF-IDF</strong> techniques to deliver personalized movie recommendations. 
+The system utilizes movie metadata like plot summaries, genres, and other attributes to find movies similar to user preferences.
+</p>
+<p>🚀 The project is deployed and live here: 
+<a href="https://movie-recommendation-system-z32q.onrender.com" target="_blank">Movie Recommendation System</a>.</p>
 
-The project is deployed and live here: Movie Recommendation System.
+---
 
-🚀 Features
-Content-Based Filtering: Leverages TF-IDF to analyze movie plot summaries and identify important keywords.
-Similarity Matching: Implements KNN to compute similarities between movies based on extracted TF-IDF features.
-Hybrid Approach: Combines content-based and collaborative techniques for accurate and diverse recommendations.
-User-Friendly Interface: A simple web-based interface to input movies and view recommendations.
-🔧 Technologies Used
-Python: Core programming language.
-Machine Learning: K-Nearest Neighbors (KNN) algorithm.
-NLP Techniques: TF-IDF (Term Frequency-Inverse Document Frequency) for text feature extraction.
-Libraries:
-pandas and numpy - Data manipulation
-scikit-learn - Machine learning algorithms and TF-IDF
-Flask - Backend framework for deployment
-HTML/CSS - Frontend interface
-Deployment: Hosted on Render.
-📊 How It Works
-Data Preprocessing:
+## <h2>🚀 Features</h2>
+<ul>
+  <li><strong>Content-Based Filtering</strong>: Leverages TF-IDF to analyze movie plot summaries and identify important keywords.</li>
+  <li><strong>Similarity Matching</strong>: Implements KNN to compute similarities between movies based on extracted TF-IDF features.</li>
+  <li><strong>Hybrid Approach</strong>: Combines content-based and collaborative techniques for accurate and diverse recommendations.</li>
+  <li><strong>User-Friendly Interface</strong>: A simple web-based interface to input movies and view recommendations.</li>
+</ul>
 
-Movie metadata (title, plot, genres) is cleaned and processed.
-TF-IDF transforms movie plots into numerical vectors, highlighting key terms.
-Similarity Computation:
+---
 
-KNN computes similarity scores between movies using cosine similarity.
-The system identifies movies closest to the user-selected movie(s).
-Recommendations:
+## <h2>🔧 Technologies Used</h2>
+<ul>
+  <li><strong>Python</strong>: Core programming language.</li>
+  <li><strong>Machine Learning</strong>: K-Nearest Neighbors (KNN) algorithm.</li>
+  <li><strong>NLP Techniques</strong>: TF-IDF (Term Frequency-Inverse Document Frequency) for text feature extraction.</li>
+  <li><strong>Libraries</strong>:
+    <ul>
+      <li><code>pandas</code> and <code>numpy</code> - Data manipulation</li>
+      <li><code>scikit-learn</code> - Machine learning algorithms and TF-IDF</li>
+      <li><code>Flask</code> - Backend framework for deployment</li>
+      <li><code>HTML/CSS</code> - Frontend interface</li>
+    </ul>
+  </li>
+  <li><strong>Deployment</strong>: Hosted on <a href="https://render.com" target="_blank">Render</a>.</li>
+</ul>
 
-Based on the similarity scores, the top N most relevant movies are recommended.
-🛠️ Setup Instructions
-Clone the Repository
+---
 
-bash
-Copy code
-git clone https://github.com/your-username/movie-recommendation-system.git
-cd movie-recommendation-system
-Install Dependencies
-Use the requirements.txt file to install necessary libraries:
+## <h2>📊 How It Works</h2>
+<ol>
+  <li><strong>Data Preprocessing</strong>:
+    <ul>
+      <li>Movie metadata (title, plot, genres) is cleaned and processed.</li>
+      <li>TF-IDF transforms movie plots into numerical vectors, highlighting key terms.</li>
+    </ul>
+  </li>
+  <li><strong>Similarity Computation</strong>:
+    <ul>
+      <li>KNN computes similarity scores between movies using cosine similarity.</li>
+      <li>The system identifies movies closest to the user-selected movie(s).</li>
+    </ul>
+  </li>
+  <li><strong>Recommendations</strong>: 
+    Based on the similarity scores, the top <em>N</em> most relevant movies are recommended.
+  </li>
+</ol>
 
-bash
-Copy code
-pip install -r requirements.txt
-Run the Application
-Start the Flask application:
+---
 
-bash
-Copy code
-python app.py
-Open your browser and go to http://127.0.0.1:5000/.
+## <h2>🛠️ Setup Instructions</h2>
+<ol>
+  <li><strong>Clone the Repository</strong>:</li>
+  <pre><code>git clone https://github.com/your-username/movie-recommendation-system.git
+cd movie-recommendation-system</code></pre>
+  
+  <li><strong>Install Dependencies</strong>:</li>
+  <pre><code>pip install -r requirements.txt</code></pre>
+  
+  <li><strong>Run the Application</strong>:</li>
+  <pre><code>python app.py</code></pre>
+  <p>Open your browser and go to <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a>.</p>
+</ol>
 
-💻 Demo
-Check out the live project here: Movie Recommendation System.
+---
 
-📈 Future Improvements
-Integrate collaborative filtering for user-based recommendations.
-Add movie ratings and user reviews for enhanced recommendations.
-Implement advanced clustering techniques like K-Means for better categorization.
-Improve the user interface with interactive visuals.
-🤝 Contributions
-Feel free to fork this repository, open issues, or submit pull requests for any enhancements!
+## <h2>💻 Demo</h2>
+<p>
+Check out the live project here: 
+<a href="https://movie-recommendation-system-z32q.onrender.com" target="_blank">Movie Recommendation System</a>.
+</p>
 
-📄 License
-This project is open-source and available under the MIT License.
+---
 
-📧 Contact
-For questions or collaboration:
-Your Name: vahith2004@gmail.com
-GitHub: https://github.com/your-username
+## <h2>📈 Future Improvements</h2>
+<ul>
+  <li>Integrate collaborative filtering for user-based recommendations.</li>
+  <li>Add movie ratings and user reviews for enhanced recommendations.</li>
+  <li>Implement advanced clustering techniques like K-Means for better categorization.</li>
+  <li>Improve the user interface with interactive visuals.</li>
+</ul>
+
+---
+
+## <h2>🤝 Contributions</h2>
+<p>Feel free to fork this repository, open issues, or submit pull requests for any enhancements!</p>
+
+---
+
+## <h2>📄 License</h2>
+<p>This project is open-source and available under the <strong>MIT License</strong>.</p>
+
+---
+
+## <h2>📧 Contact</h2>
+<p>
+<strong>Your Name</strong>: [Your Email]<br>
+<strong>GitHub</strong>: <a href="https://github.com/your-username" target="_blank">https://github.com/your-username</a>
+</p>
