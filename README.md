@@ -106,6 +106,6 @@ Check out the live project here:
 
 ## <h2>📧 Contact</h2>
 <p>
-<strong>Your Name</strong>: [Your Email]<br>
+<strong>Your Name</strong>: vahith2004@gmail.com<br>
 <strong>GitHub</strong>: <a href="https://github.com/your-username" target="_blank">https://github.com/your-username</a>
 </p>
