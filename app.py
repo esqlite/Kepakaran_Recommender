@@ -148,7 +148,7 @@ def index():
 @app.route('/recommend', methods=['POST'])
 def recommend():
     movie_title = request.form['movie_title']
-    num_recommendations = int(request.form.get('num_recommendations', 5))  # Default to 5 if not provided
+    num_recommendations = int(request.form.get('num_recommendations', 4))  # Default to 4 if not provided
     recommendations = recommend_movies(movie_title, top_n=num_recommendations)
 
     if not recommendations:
