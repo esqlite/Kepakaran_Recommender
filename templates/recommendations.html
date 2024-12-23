@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendations for "{{ movie_title }}"</title>
+    <title>Recommendations for "{{ pakar_query }}"</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: Inter,sans-serif;
+            background-color: #fff;
             color: #333;
             margin: 0;
             padding: 0;
@@ -31,61 +32,71 @@
             max-width: 1200px;
         }
 
-        .movie {
+        .expert {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
             width: 220px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: thin solid #dfe1e5;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             overflow: hidden;
+            position: relative;
+            height: 460px;
         }
 
-        .movie:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        .expert:hover {
+            /*transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);*/
         }
 
-        .movie img {
+        .expert img {
             width: 100%;
-            height: auto;
+            height: 280px;
+            object-fit: cover;
             border-radius: 5px;
             transition: transform 0.3s ease;
+            background: #dfe1e4;
         }
 
-        .movie img:hover {
+        .expert img:hover {
             transform: scale(1.05);
         }
 
-        .movie h3 {
-            font-size: 1.2rem;
+        .expert h3 {
+            font-size: 18px;
             font-weight: bold;
             margin-top: 15px;
-            color: #34495e;
+            color: #000;
             margin-bottom: 10px;
         }
 
-        .movie p {
+        .expert p {
             font-size: 0.9rem;
-            color: #7f8c8d;
+            color: #565656;
             margin-bottom: 10px;
+            line-height: 22px;
         }
 
-        .movie a {
+        .expert a {
             display: inline-block;
             text-decoration: none;
             font-size: 14px;
-            color: #3498db;
+            color: #fff;
             font-weight: bold;
             padding: 8px 16px;
             border-radius: 5px;
-            background-color: #ecf0f1;
+            background-color: #306bea;
             transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 13px;
+            left: 9%;
+            width: 70%;
+            border: thin solid #306bea;
         }
 
-        .movie a:hover {
-            background-color: white;
+        .expert a:hover {
+            background-color: #3569da;
             color: white;
         }
 
@@ -101,17 +112,16 @@
         }
 
         .go-back:hover {
-            color: #2c3e50;
+            color: #306bea;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .recommendations {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .movie {
+            .expert {
                 width: 300px;
                 margin-bottom: 20px;
             }
@@ -122,11 +132,11 @@
         }
 
         @media (max-width: 480px) {
-            .movie {
+            .expert {
                 width: 100%;
                 margin: 10px 0;
             }
- 
+
             h1 {
                 font-size: 1.8rem;
             }
@@ -134,17 +144,18 @@
     </style>
 </head>
 <body>
-    <h1>Recommendations for "{{ movie_title }}"</h1>
-    <div class="recommendations">
-        {% for recommendation in recommendations %}
-        <div class="movie">
-            <h3>{{ recommendation.title }}</h3>
-            <a href="https://www.google.com/search?q={{ recommendation.movie_title }}" target="_blank">
-                <img src="{{ recommendation.poster }}" alt="{{ recommendation.title }}">
-            </a>
-        </div>
-        {% endfor %}
+    <h1>Recommendations for "{{ pakar_query }}"</h1>
+<div class="recommendations">
+    {% for recommendation in recommendations %}
+    <div class="expert">
+        <img src="{{ recommendation.image }}" alt="{{ recommendation.name }}">
+        <h3>{{ recommendation.name }}</h3>
+        <p>{{ recommendation.jenjang }}<br>
+        h-index: {{ recommendation.h_index }}</p>
+        <a href="{{ recommendation.scopus }}" target="_blank">View Scopus Profile</a>
     </div>
-    <a href="/" class="go-back">Go Back</a>
+    {% endfor %}
+</div>
+<a href="/" class="go-back">Go Back</a>
 </body>
 </html>
